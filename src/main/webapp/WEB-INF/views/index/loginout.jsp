@@ -1,16 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fake5
-  Date: 2021-06-14
-  Time: 오후 6:19
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-    <h1>로그아웃</h1>
-</body>
-</html>
+<%@ page contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%-- session.invalidate(); --%>
+<c:set var="userid" value="${sessionScope.remove(userid)}" />
+
+<script>location.href='index.jsp';</script>
